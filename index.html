@@ -1,1 +1,86 @@
-homepage
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WFT Helper Chrome Extension</title>
+    <meta name="description" content="A simple and secure Chrome Extension to synchronize your Home Depot work schedule to your personal Google Calendar.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles from Privacy Policy to maintain consistency */
+        :root {
+            --color-primary: #f96302; /* Orange-Red for highlights */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .policy__emphasis {
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+        /* Style for the main container */
+        .homepage__container {
+            min-height: calc(100vh - 40px); /* Fill screen minus padding */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased">
+    <main class="homepage__container container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center">
+        
+        <div class="bg-white shadow-2xl rounded-xl p-8 md:p-12 lg:p-16 text-center w-full">
+            
+            <header class="mb-8">
+                <h1 class="text-5xl sm:text-6xl font-extrabold text-gray-900 mb-4">
+                    WFT Helper
+                </h1>
+                <p class="text-xl text-gray-700 font-light italic">
+                    Your Work Schedule, Automatically Synced.
+                </p>
+            </header>
+
+            <section class="text-left mb-10">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b pb-2">
+                    About the Extension
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    The **WFT Helper Chrome Web Extension** (also listed as "WFT Scheduler" in the Web Store) is a utility designed for associates to seamlessly integrate their work schedules from The Home Depot's proprietary Workforce Tools portal into their personal Google Calendar.
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    It's fast, automatic, and built with <strong class="policy__emphasis">privacy as the core principle</strong>—all schedule processing happens locally on your browser.
+                </p>
+            </section>
+            
+            <a href="https://chromewebstore.google.com/detail/wft-scheduler/icagjpahpoaieakejfhppgaafdiifjcj?authuser=0&hl=en" 
+               target="_blank" 
+               class="inline-block px-8 py-3 text-lg font-bold text-white transition duration-150 rounded-lg shadow-xl"
+               style="background-color: var(--color-primary); hover: background-color: #e55301;"
+               aria-label="Install WFT Helper / WFT Scheduler from the Chrome Web Store">
+                Install on Chrome
+            </a>
+            <p class="text-sm text-gray-500 mt-4">
+                You will be redirected to the Chrome Web Store.
+            </p>
+        </div>
+
+        <footer class="mt-8">
+            <nav class="flex justify-center space-x-4">
+                <a href="/privacypolicy" class="text-gray-600 hover:text-gray-900 font-medium transition duration-150">
+                    Privacy Policy
+                </a>
+            </nav>
+        </footer>
+    </main>
+</body>
+</html>
