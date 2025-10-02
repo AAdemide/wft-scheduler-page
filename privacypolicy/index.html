@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WFT Helper Privacy Policy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles to enhance BEM readability and typography */
+        :root {
+            --color-primary: #f96302; /* Orange-Red for highlights */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .policy__emphasis {
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+        /* BEM: Block Policy */
+        .policy {
+            /* General styling handled by Tailwind */
+        }
+        .policy__header {
+            /* General styling handled by Tailwind */
+        }
+        .policy__core-principle {
+            border-left: 4px solid var(--color-primary);
+        }
+        /* BEM: Element Section */
+        .policy__section-title {
+            /* Tailwind handles most styling */
+        }
+        /* BEM: Element Table */
+        .policy__table-header {
+            background-color: #fef3c7; /* Light yellow/orange tone */
+            color: #78350f;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        /* BEM: Element List */
+        .policy__list-item::marker {
+            color: var(--color-primary);
+        }
+        
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen antialiased">
+    <main class="policy container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+        <div class="policy__container bg-white shadow-2xl rounded-xl overflow-hidden p-6 md:p-10 lg:p-12">
+            
+            <header class="policy__header">
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 border-b pb-4 mb-6">
+                    Privacy Policy for WFT Helper Chrome Web Extension
+                </h1>
+                <p class="policy__paragraph text-sm text-gray-500 mb-8">
+                    **Effective Date:** <span class="font-medium text-gray-700">October 2, 2025 (Updated)</span>
+                </p>
+                <p class="policy__paragraph text-gray-700 leading-relaxed mb-6">
+                    This Privacy Policy describes how the **WFT Helper Chrome Web Extension** ("the Extension") handles user data. The Extension's sole function is to synchronize your work schedule from The Home Depot's proprietary Workforce Tools portal to your personal Google Calendar.
+                </p>
+                <p class="policy__core-principle policy__paragraph text-gray-800 italic p-3 pl-4 bg-yellow-50 rounded-lg">
+                    <strong class="policy__emphasis font-bold">The core principle of this Extension's design is local data processing and user privacy. We do not transmit user data to external servers outside of the Google Calendar API call initiated by the user.</strong>
+                </p>
+            </header>
+
+            <section class="policy__section">
+                <h2 class="policy__section-title text-3xl font-bold text-gray-900 pt-8 mt-8 border-t border-gray-200">
+                    1. Data Collection and Processing
+                </h2>
+                <p class="policy__paragraph text-gray-600 mt-4">
+                    The WFT Helper Extension operates primarily within your local web browser environment. **We do not collect, transmit, store, or sell any user data on our own external servers.** All processing and storage of sensitive information are performed locally on your device, with the exception of required interactions with the Google Calendar API.
+                </p>
+
+                <h3 class="policy__subsection-title text-2xl font-semibold text-gray-800 mt-6 mb-4">
+                    A. Data Processed Locally (Non-Google User Data)
+                </h3>
+                <p class="policy__paragraph text-gray-600 mb-4">
+                    The Extension processes the following data types directly within your browser:
+                </p>
+
+                <div class="policy__data-table-wrapper overflow-x-auto shadow-md rounded-xl">
+                    <table class="policy__table w-full text-sm text-left text-gray-500">
+                        <thead>
+                            <tr class="policy__table-header text-xs text-left">
+                                <th scope="col" class="px-6 py-3 rounded-tl-xl">Data Type</th>
+                                <th scope="col" class="px-6 py-3">Source</th>
+                                <th scope="col" class="px-6 py-3 rounded-tr-xl">Purpose of Processing</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="policy__table-row bg-white border-b hover:bg-gray-50">
+                                <td class="policy__table-data px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                    **Work Schedule Details** (Date, Time, Location)
+                                </td>
+                                <td class="policy__table-data px-6 py-4">
+                                    The Home Depot Workforce Tools portal (`https://wft.homedepot.com/`) via `webRequest` interception.
+                                </td>
+                                <td class="policy__table-data px-6 py-4">
+                                    Used solely to format shifts into calendar events and send them to your Google Calendar.
+                                </td>
+                            </tr>
+                            <tr class="policy__table-row bg-white border-b hover:bg-gray-50">
+                                <td class="policy__table-data px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                    **Workforce User Data** (Name)
+                                </td>
+                                <td class="policy__table-data px-6 py-4">
+                                    The Home Depot Workforce Tools API endpoints.
+                                </td>
+                                <td class="policy__table-data px-6 py-4">
+                                    Used solely to personalize the name of the dedicated Google Calendar (e.g., "John Doe's WFT Calendar").
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="policy__subsection-title text-2xl font-semibold text-gray-800 mt-8 mb-4">
+                    B. Google User Data Accessed and Stored Locally
+                </h3>
+                <p class="policy__paragraph text-gray-600">
+                    The Extension uses the `identity` permission and `chrome.storage` to handle the following Google user data, which is only processed for the function of syncing your schedule:
+                </p>
+                <ul class="policy__list-items list-disc ml-6 mt-3 text-gray-700 space-y-2">
+                    <li class="policy__list-item">
+                        **Google Access Token (Google User Data):** A temporary token used to authorize access to the Google Calendar API on your behalf. This is stored locally in `chrome.storage` and automatically expires.
+                    </li>
+                    <li class="policy__list-item">
+                        **Google Calendar ID (Google User Data):** The unique identifier for the dedicated WFT Helper Calendar created in your Google account. Stored locally to ensure future events are synced to the correct calendar.
+                    </li>
+                    <li class="policy__list-item">
+                        **Google User Email (Google User Data):** Stored locally for validation purposes, ensuring the user is syncing to the calendar created with the correct Google account.
+                    </li>
+                    <li class="policy__list-item">
+                        **Work Shift Events:** The processed schedule data (date, time, location) is created as an event and **shared with the Google Calendar API** to be written to your personal Google Calendar. This is the only instance where processed data leaves your local device and is sent to a third-party (Google).
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="policy__section">
+                <h2 class="policy__section-title text-3xl font-bold text-gray-900 pt-8 mt-8 border-t border-gray-200">
+                    2. Limited Use of Google User Data
+                </h2>
+                <p class="policy__paragraph text-gray-600 mt-4">
+                    The WFT Helper Extension's use of information received from Google APIs will adhere to the **Google API Services User Data Policy, including the Limited Use requirements.**
+                </p>
+                <ul class="policy__list-items list-disc ml-6 mt-3 text-gray-700 space-y-2">
+                    <li class="policy__list-item">
+                        **No Sale of Data:** We will **not** sell Google user data (including Access Tokens, Calendar IDs, or Email Addresses) to third parties.
+                    </li>
+                    <li class="policy__list-item">
+                        **Limited Transfer:** We will **not** transfer Google user data to others, except as necessary to provide or improve the core, user-facing functionality of the Extension (i.e., syncing your work schedule to Google Calendar), comply with applicable law, or as part of a merger/acquisition.
+                    </li>
+                    <li class="policy__list-item">
+                        **No Advertising or Profiling:** We will **not** use or transfer Google user data to serve users personalized, retargeted, or interest-based advertising.
+                    </li>
+                    <li class="policy__list-item">
+                        **No AI Training:** We will **not** use Google user data for training, modeling, or improving generative AI/machine learning models.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="policy__section">
+                <h2 class="policy__section-title text-3xl font-bold text-gray-900 pt-8 mt-8 border-t border-gray-200">
+                    3. Data Security and Protection
+                </h2>
+                <p class="policy__paragraph text-gray-600 mt-4">
+                    We employ appropriate technical and organizational measures designed to protect the confidentiality and integrity of your data:
+                </p>
+                <ul class="policy__list-items list-disc ml-6 mt-3 text-gray-700 space-y-2">
+                    <li class="policy__list-item">
+                        **OAuth 2.0:** We use Google's secure and standard OAuth 2.0 protocol for authentication. This means we never see or store your Google password.
+                    </li>
+                    <li class="policy__list-item">
+                        **Secure Local Storage:** All sensitive Google user data (Access Token, Calendar ID, Email) is stored in the browser's `chrome.storage` API, which is isolated to the Extension and protected by the browser's security model.
+                    </li>
+                    <li class="policy__list-item">
+                        **Encrypted Transmission:** All communications with the Google Calendar API are conducted over secure, industry-standard encrypted connections (HTTPS/SSL).
+                    </li>
+                </ul>
+            </section>
+
+            <section class="policy__section">
+                <h2 class="policy__section-title text-3xl font-bold text-gray-900 pt-8 mt-8 border-t border-gray-200">
+                    4. Data Retention and Deletion
+                </h2>
+                <p class="policy__paragraph text-gray-600 mt-4">
+                    We only retain data for as long as necessary to fulfill the services requested by the user.
+                </p>
+                <ul class="policy__list-items list-disc ml-6 mt-3 text-gray-700 space-y-2">
+                    <li class="policy__list-item">
+                        **Authentication Tokens:** Google Access Tokens are temporary and either automatically expire (typically within an hour) or are securely refreshed as needed to maintain service functionality. The Refresh Token is stored locally until the Extension is uninstalled.
+                    </li>
+                    <li class="policy__list-item">
+                        **Local Data Deletion:** Upon uninstallation of the WFT Helper Extension from your Chrome browser, all locally stored data, including the Google User Email, Calendar ID, and all authentication tokens, is immediately and permanently deleted from your device's `chrome.storage`.
+                    </li>
+                    <li class="policy__list-item">
+                        **Calendar Events:** The calendar events created in your Google Calendar are under your direct control and retention policy. Deleting the Extension will **not** automatically delete the events it created. You must delete the events or the dedicated calendar yourself via Google Calendar settings.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="policy__section">
+                <h2 class="policy__section-title text-3xl font-bold text-gray-900 pt-8 mt-8 border-t border-gray-200">
+                    5. Permissions Justification
+                </h2>
+                <p class="policy__paragraph text-gray-600 mt-4 mb-4">
+                    The Extension requests the following permissions to fulfill its sole function of synchronizing your schedule:
+                </p>
+                <ul class="policy__list-items list-disc ml-6 text-gray-700 space-y-2">
+                    <li class="policy__list-item">**Host Permission (`https://wft.homedepot.com/`):** Required to inject the content script and use `webRequest` to capture internal schedule data endpoints.</li>
+                    <li class="policy__list-item">**`webRequest`:** Required for monitoring network traffic **exclusively on the Home Depot domain** to securely obtain the raw schedule data.</li>
+                    <li class="policy__list-item">**`identity`:** Required to initiate the secure Google OAuth flow, allowing the user to grant access to the Google Calendar API.</li>
+                    <li class="policy__list-item">**`storage`:** Required for local, secure storage of configuration data and authentication tokens.</li>
+                    <li class="policy__list-item">**`activeTab`:** Required to ensure the synchronization process is initiated successfully upon user interaction (clicking the extension icon).</li>
+                </ul>
+            </section>
+            
+            <section class="policy__section">
+                <h2 class="policy__section-title text-3xl font-bold text-gray-900 pt-8 mt-8 border-t border-gray-200">
+                    6. Children's Privacy
+                </h2>
+                <p class="policy__paragraph text-gray-600 mt-4">
+                    The WFT Helper Extension is not intended for use by individuals under the age of 18. We do not knowingly process or store data from children.
+                </p>
+            </section>
+
+            <section class="policy__section">
+                <h2 class="policy__section-title text-3xl font-bold text-gray-900 pt-8 mt-8 border-t border-gray-200">
+                    7. Changes to This Policy
+                </h2>
+                <p class="policy__paragraph text-gray-600 mt-4">
+                    We may update our Privacy Policy from time to time. We will notify users of any material changes by updating the effective date of this policy and providing prominent notice within the extension or extension store listing. Continuing to use the Extension after changes are made signifies your acceptance of the revised policy.
+                </p>
+            </section>
+
+            <section class="policy__section">
+                <h2 class="policy__section-title text-3xl font-bold text-gray-900 pt-8 mt-8 border-t border-gray-200">
+                    8. Contact Information
+                </h2>
+                <p class="policy__paragraph text-gray-600 mt-4">
+                    If you have any questions about this Privacy Policy or the data practices of the WFT Helper Extension, please contact me at:
+                </p>
+                <p class="policy__contact-info text-lg font-semibold text-center mt-4 p-4 bg-gray-100 rounded-lg">
+                    <a href="mailto:aademide.dev@gmail.com" class="text-blue-600 hover:text-blue-800 transition duration-150">aademide.dev@gmail.com</a>
+                </p>
+            </section>
+
+        </div>
+    </main>
+</body>
+</html>
